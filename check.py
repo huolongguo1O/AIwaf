@@ -5,7 +5,7 @@ import urllib.parse
 tokenizer = BertTokenizer.from_pretrained('huolongguo10/check_sec_tiny')
 model = AutoModelForSequenceClassification.from_pretrained('huolongguo10/check_sec_tiny', num_labels=2)
 import torch
-f=open('/home/huolongguo10/debug','a+')
+
 def _check(text):
     inputs = tokenizer(text, return_tensors="pt")
     with torch.no_grad():
