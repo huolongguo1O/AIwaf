@@ -2,7 +2,7 @@
 #include <ngx_core.h>
 #include <ngx_http.h>
 
-#define DEBUG
+//#define DEBUG
 // waf 配置结构
 typedef struct 
 {
