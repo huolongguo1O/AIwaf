@@ -3,7 +3,7 @@
 #include <ngx_core.h>
 #include <ngx_http.h>
 #include <ngx_http_request.h>
-#define DEBUG
+//#define DEBUG
 PyObject *check_module;
 PyObject *check_function ;
 int is_init=0;
@@ -27,17 +27,7 @@ int init(){
   #endif
    return 0;
 }
-/*
-int check_param(ngx_http_request_t *r, const char *param_name)
-{
-   ngx_http_param_t *param;
-   for (param = r->args; param; param = param->next) {
-       if (strcmp(param->name, param_name) == 0) {
-           return 1;
-       }
-   }
-   return 0;
-}*/
+
 int check(ngx_http_request_t *r) {
    if(is_init==0) init();
    if(r->args.data==NULL){
