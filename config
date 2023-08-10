@@ -1,0 +1,6 @@
+ngx_addon_name=ngx_http_waf_module
+HTTP_MODULES="$HTTP_MODULES ngx_http_waf_module"
+NGX_ADDON_SRCS="$NGX_ADDON_SRCS $ngx_addon_dir/ngx_waf.c\
+                               $ngx_addon_dir/check.c"
+CORE_INCS="$CORE_INCS /usr/include/python3.11 "
+CORE_LIBS="$CORE_LIBS -L/usr/lib/python3.11/config-3.11-x86_64-linux-gnu -L/usr/lib/x86_64-linux-gnu -lpython3.11 -ldl  -lm  "
