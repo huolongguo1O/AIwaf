@@ -58,8 +58,10 @@ ngx_module_t ngx_http_waf_module = {
 
 
 static char *ngx_waf_set( ngx_conf_t *cf, ngx_command_t *cmd, void *conf ) {
+  #ifdef DEBUG
   ngx_http_waf_loc_conf_t *local_conf;
   local_conf = conf;
+  #endif
   char *rv = NULL;
 
   // 读取NGX_CONF_FLAG类型参数
